@@ -1,0 +1,159 @@
+:root {
+    --ink: #f7f3ed;
+    --muted: #b9b2aa;
+    --accent: #f2b84b;
+    --panel: #25232a;
+    --background: #111116;
+    --border: #48434a;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+    background: radial-gradient(circle at top right, #302b35 0, var(--background) 48%);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.page-shell {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    padding: 32px 20px;
+}
+
+.recommendation-panel {
+    width: min(100%, 720px);
+    padding: clamp(32px, 7vw, 72px);
+    background: linear-gradient(145deg, rgba(37, 35, 42, 0.98), rgba(29, 28, 34, 0.96));
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+}
+
+.brand-mark {
+    display: grid;
+    width: 44px;
+    height: 44px;
+    margin-bottom: 32px;
+    place-items: center;
+    border-radius: 50%;
+    background-color: var(--accent);
+    color: #201d1a;
+    font-family: Arial, sans-serif;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+}
+
+.eyebrow {
+    margin: 0 0 12px;
+    color: var(--accent);
+    font-family: Arial, sans-serif;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    font-weight: normal;
+    line-height: 0.95;
+}
+
+h1 span {
+    color: var(--accent);
+}
+
+.description {
+    max-width: 520px;
+    margin: 24px 0 40px;
+    color: var(--muted);
+    font-size: 1.15rem;
+    line-height: 1.6;
+}
+
+.movie-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+textarea {
+    display: block;
+    width: 100%;
+    min-height: 170px;
+    margin-bottom: 16px;
+    padding: 16px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    outline: none;
+    background-color: #17161b;
+    color: var(--ink);
+    font: 1rem/1.5 Arial, sans-serif;
+    resize: vertical;
+}
+
+textarea::placeholder {
+    color: #777179;
+}
+
+textarea:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(242, 184, 75, 0.16);
+}
+
+button {
+    padding: 14px 20px;
+    border: 0;
+    border-radius: 8px;
+    background-color: var(--accent);
+    color: #201d1a;
+    font: bold 0.95rem Arial, sans-serif;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button span {
+    display: inline-block;
+    margin-left: 8px;
+    font-size: 1.1rem;
+}
+
+button:hover {
+    background-color: #ffd071;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+    .page-shell {
+        padding: 16px;
+    }
+
+    .recommendation-panel {
+        padding: 32px 24px;
+        border-radius: 12px;
+    }
+
+    .brand-mark {
+        margin-bottom: 24px;
+    }
+
+    .description {
+        margin-bottom: 32px;
+        font-size: 1rem;
+    }
+
+    button {
+        width: 100%;
+    }
+}

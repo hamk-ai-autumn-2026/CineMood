@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineMood</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="page-shell">
+        <section class="recommendation-panel">
+            <div class="brand-mark" aria-hidden="true">CM</div>
+            <p class="eyebrow">Your next story starts here</p>
+            <h1>Cine<span>Mood</span></h1>
+            <p class="description">Tell us what you feel like watching, and discover a movie that fits the moment.</p>
+
+            <form class="movie-form">
+                <label for="movie-request">What are you in the mood for?</label>
+                <textarea id="movie-request" name="movie_request" placeholder="A funny adventure movie for the whole family..."></textarea>
+                <button type="button">Recommend Movies <span aria-hidden="true">&#8594;</span></button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
